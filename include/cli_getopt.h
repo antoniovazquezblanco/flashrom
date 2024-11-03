@@ -1,19 +1,17 @@
 /*
  * This file is part of the flashrom project.
  *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
+ * SPDX-FileCopyrightText: 2024 Antonio Vázquez Blanco <antoniovazquezblanco@gmail.com>
+ * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#ifndef CLI_CLASSIC_H
-#define CLI_CLASSIC_H
+#ifndef __CLI_GETOPT_H__
+#define __CLI_GETOPT_H__
+
+/**
+ * This header is responsible for either including a standard getop
+ * implementation header or to provide a compatible one.
+ */
 
 #ifdef HAVE_GETOPT_H
 #include <getopt.h>
@@ -40,4 +38,4 @@ int getopt_long_only (int argc, char *const *argv, const char *shortopts,
 			const struct option *longopts, int *longind);
 
 #endif /* HAVE_GETOPT_H */
-#endif /* CLI_CLASSIC_H */
+#endif /* __CLI_GETOPT_H__ */
