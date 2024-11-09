@@ -25,13 +25,14 @@
  * SOFTWARE.
  */
 
+#include "cli_getopt.h"
+
 #include <unistd.h>
 #include <wchar.h>
 #include <string.h>
 #include <limits.h>
 #include <stdlib.h>
-#include "cli_classic.h"
-#include "flash.h"
+#include "flash.h" // msg_gerr
 
 char *optarg;
 int optind=1, opterr=1, optopt, optpos;
