@@ -8,6 +8,7 @@
  * SPDX-FileCopyrightText: 2011-2013 Stefan Tauner
  */
 
+
 /* strnlen is in POSIX but was a GNU extension up to glibc 2.10 */
 #if (__GLIBC__ == 2 && __GLIBC_MINOR__ < 10) || __GLIBC__ < 2
 #define _GNU_SOURCE
@@ -15,16 +16,16 @@
 #define _POSIX_C_SOURCE 200809L
 #endif
 
-#include <strings.h>
+#include "dmi.h"
+
 #include <string.h>
 #include <ctype.h>
-#include <stdbool.h>
-#include <stdio.h>
+#include <stdint.h>
+#include <stddef.h>
 #include <stdlib.h>
 
 #include "flash.h"
 #include "hwaccess_physmap.h"
-#include "programmer.h"
 
 /* Enable SMBIOS decoding. Currently legacy DMI decoding is enough. */
 #define SM_SUPPORT 0
