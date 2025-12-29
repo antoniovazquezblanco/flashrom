@@ -8,6 +8,8 @@
  * SPDX-FileCopyrightText: 2011-2013 Stefan Tauner
  */
 
+#include "dmi.h"
+
 /* strnlen is in POSIX but was a GNU extension up to glibc 2.10 */
 #if (__GLIBC__ == 2 && __GLIBC_MINOR__ < 10) || __GLIBC__ < 2
 #define _GNU_SOURCE
